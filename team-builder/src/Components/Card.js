@@ -1,5 +1,7 @@
 import React from "react";
 
+import {Link} from "react-router-dom";
+
 const Card = (props) => {
     const {person} = props;
 return(
@@ -8,6 +10,7 @@ return(
         <div>Name: {person.name}</div>
         <div>Email: {person.email}</div>
         <div>Role: {person.role}</div>
+        <Link to={`/edit/${person.id}`}>Edit</Link>
     </div>
 )
 };
